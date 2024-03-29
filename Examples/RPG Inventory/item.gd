@@ -26,6 +26,7 @@ var icon_number
 
 
 func _ready():
+  super._ready()
   _load_icon()
 
 

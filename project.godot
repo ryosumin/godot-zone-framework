@@ -6,141 +6,17 @@
 ;   [section] ; section goes between []
 ;   param=value ; assign values to parameters
 
-config_version=4
-
-_global_script_classes=[ {
-"base": "GridGameLogic",
-"class": "ChessLogic",
-"language": "GDScript",
-"path": "res://Examples/Chess/chess_logic.gd"
-}, {
-"base": "KinematicBody2D",
-"class": "DragMovement2D",
-"language": "GDScript",
-"path": "res://src/piece/2d/drag_piece_2d/components/drag_movement_2d.gd"
-}, {
-"base": "Piece2D",
-"class": "DragPiece2D",
-"language": "GDScript",
-"path": "res://src/piece/2d/drag_piece_2d/drag_piece.gd"
-}, {
-"base": "Reference",
-"class": "EffectGroup",
-"language": "GDScript",
-"path": "res://src/game_logic/effect_group.gd"
-}, {
-"base": "Node",
-"class": "GameLogic",
-"language": "GDScript",
-"path": "res://src/game_logic/game_logic.gd"
-}, {
-"base": "Reference",
-"class": "Grid",
-"language": "GDScript",
-"path": "res://src/grid/grid.gd"
-}, {
-"base": "Reference",
-"class": "GridBounds",
-"language": "GDScript",
-"path": "res://src/grid/grid_bounds.gd"
-}, {
-"base": "GameLogic",
-"class": "GridGameLogic",
-"language": "GDScript",
-"path": "res://src/grid/grid_game_logic.gd"
-}, {
-"base": "Reference",
-"class": "GridObstacle",
-"language": "GDScript",
-"path": "res://src/grid/grid_obstacle.gd"
-}, {
-"base": "Grid",
-"class": "HexGrid",
-"language": "GDScript",
-"path": "res://src/grid/hex_grid/hex_grid.gd"
-}, {
-"base": "GridBounds",
-"class": "HexGridBounds",
-"language": "GDScript",
-"path": "res://src/grid/hex_grid/hex_grid_bounds.gd"
-}, {
-"base": "GameLogic",
-"class": "InventoryLogic",
-"language": "GDScript",
-"path": "res://Examples/RPG Inventory/inventory_logic.gd"
-}, {
-"base": "Reference",
-"class": "MovePath",
-"language": "GDScript",
-"path": "res://src/grid/move_path.gd"
-}, {
-"base": "Reference",
-"class": "MovePattern",
-"language": "GDScript",
-"path": "res://src/grid/move_pattern.gd"
-}, {
-"base": "Node2D",
-"class": "OverlapDetector2D",
-"language": "GDScript",
-"path": "res://src/piece/2d/drag_piece_2d/components/overlap_detector_2d.gd"
-}, {
-"base": "Node2D",
-"class": "Piece2D",
-"language": "GDScript",
-"path": "res://src/piece/2d/piece_2d.gd"
-}, {
-"base": "Grid",
-"class": "SquareGrid",
-"language": "GDScript",
-"path": "res://src/grid/square_grid/square_grid.gd"
-}, {
-"base": "GridBounds",
-"class": "SquareGridBounds",
-"language": "GDScript",
-"path": "res://src/grid/square_grid/square_grid_bounds.gd"
-}, {
-"base": "MovePattern",
-"class": "SquareMovePattern",
-"language": "GDScript",
-"path": "res://src/grid/square_grid/square_move_pattern.gd"
-}, {
-"base": "Node2D",
-"class": "Zone2D",
-"language": "GDScript",
-"path": "res://src/zone/zone_2d.gd"
-} ]
-_global_script_class_icons={
-"ChessLogic": "",
-"DragMovement2D": "",
-"DragPiece2D": "",
-"EffectGroup": "",
-"GameLogic": "",
-"Grid": "",
-"GridBounds": "",
-"GridGameLogic": "",
-"GridObstacle": "",
-"HexGrid": "",
-"HexGridBounds": "",
-"InventoryLogic": "",
-"MovePath": "",
-"MovePattern": "",
-"OverlapDetector2D": "",
-"Piece2D": "",
-"SquareGrid": "",
-"SquareGridBounds": "",
-"SquareMovePattern": "",
-"Zone2D": ""
-}
+config_version=5
 
 [application]
 
 config/name="Godot Zone Framework"
 run/main_scene="res://Examples/Chess/chess.tscn"
+config/features=PackedStringArray("4.2")
 config/icon="res://icon.png"
 
 [rendering]
 
+environment/defaults/default_environment="res://default_env.tres"
 quality/driver/driver_name="GLES2"
 vram_compression/import_etc=true
-vram_compression/import_etc2=false
-environment/default_environment="res://default_env.tres"

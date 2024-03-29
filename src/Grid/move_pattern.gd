@@ -48,7 +48,7 @@ func _sequence_from_string(string: String) -> Array:
 		else:
 			if ch == "(":
 				buffer_active = true
-			elif ch.is_valid_integer():
+			elif ch.is_valid_int():
 				repeat *= 10
 				repeat += int(ch)
 			else:

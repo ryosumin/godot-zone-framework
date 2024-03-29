@@ -13,7 +13,8 @@ var width
 var height
 
 
-func _init(dimensions: Vector2, mode = POINTY, shape = HEXAGONAL).(dimensions):
+func _init(dimensions: Vector2, mode = POINTY, shape = HEXAGONAL):
+	super(dimensions)
 	self.mode = mode
 	self.shape = shape
 	width = int(dimensions.x)

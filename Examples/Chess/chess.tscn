@@ -1,36 +1,38 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=5 format=3 uid="uid://dlcjclacxo21u"]
 
-[ext_resource path="res://Examples/Chess/chess.gd" type="Script" id=1]
-[ext_resource path="res://src/grid/square_grid/square_grid_generator.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Examples/Chess/fonts/lemon_milk/LEMONMILK-Regular.otf" type="DynamicFontData" id=3]
+[ext_resource type="Script" path="res://Examples/Chess/chess.gd" id="1"]
+[ext_resource type="PackedScene" uid="uid://dh6yqsrgyfseh" path="res://src/Grid/square_grid/square_grid_generator.tscn" id="2"]
+[ext_resource type="FontFile" uid="uid://c0rethlsn4j48" path="res://Examples/Chess/Fonts/lemon_milk/LEMONMILK-Regular.otf" id="3"]
 
-[sub_resource type="DynamicFont" id=1]
-size = 32
-font_data = ExtResource( 3 )
+[sub_resource type="FontFile" id="1"]
+fallbacks = Array[Font]([ExtResource("3")])
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+cache/0/16/0/kerning_overrides/16/0 = Vector2(0, 0)
 
 [node name="Chess" type="Node2D"]
-script = ExtResource( 1 )
+script = ExtResource("1")
 
 [node name="ColorRect" type="ColorRect" parent="."]
-margin_right = 1024.0
-margin_bottom = 600.0
+offset_right = 1024.0
+offset_bottom = 600.0
 mouse_filter = 2
-color = Color( 0.027451, 0.176471, 0.203922, 1 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
+color = Color(0.027451, 0.176471, 0.203922, 1)
 
-[node name="Grid" parent="." instance=ExtResource( 2 )]
-position = Vector2( 650, 300 )
+[node name="Grid" parent="." instance=ExtResource("2")]
+position = Vector2(650, 300)
 columns = 8
 rows = 8
-cell_size = Vector2( 64, 64 )
-cell_margin = Vector2( 0, 0 )
+cell_size = Vector2(64, 64)
+cell_margin = Vector2(0, 0)
 
 [node name="Label" type="Label" parent="."]
-margin_left = 90.0
-margin_top = 250.0
-margin_right = 314.0
-margin_bottom = 293.0
-custom_fonts/font = SubResource( 1 )
+offset_left = 90.0
+offset_top = 250.0
+offset_right = 314.0
+offset_bottom = 293.0
+theme_override_fonts/font = SubResource("1")
 text = "White's Turn"

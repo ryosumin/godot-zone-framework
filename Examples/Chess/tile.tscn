@@ -16,12 +16,12 @@ shape = SubResource( 1 )
 position = Vector2( -32, -32 )
 
 [node name="Base" type="Polygon2D" parent="." index="2"]
-polygon = PoolVector2Array( -32, -32, 32, -32, 32, 32, -32, 32 )
+polygon = PackedVector2Array( -32, -32, 32, -32, 32, 32, -32, 32 )
 
 [node name="Highlight" type="Polygon2D" parent="." index="3"]
 visible = false
-polygon = PoolVector2Array( -32, -32, 32, -32, 32, 32, -32, 32 )
+polygon = PackedVector2Array( -32, -32, 32, -32, 32, 32, -32, 32 )
 
 [node name="Origin" type="Polygon2D" parent="." index="4"]
 visible = false
-polygon = PoolVector2Array( -32, -32, 32, -32, 32, 32, -32, 32 )
+polygon = PackedVector2Array( -32, -32, 32, -32, 32, 32, -32, 32 )

@@ -14,14 +14,14 @@ var zone
 
 # Moves the piece to a default location specified by its Zone
 func return_to_zone():
-	zone.reset_piece_position(self)
+  zone.reset_piece_position(self)
 
 
 # Teleports the piece to the given position.
 func warp_to_position(position: Vector2):
-	self.position = position
+  self.position = position
 
 
 # Moves the piece to the given position. Unless overriden, an alias of `warp_to_position`.
 func move_to_position(position: Vector2):
-	warp_to_position(position)
+  warp_to_position(position)

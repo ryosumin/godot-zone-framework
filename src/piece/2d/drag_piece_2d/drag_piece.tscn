@@ -20,4 +20,4 @@ collision_enabled = false
 drop_on_collide = false
 
 [node name="OverlapDetector2D" parent="." index="1" instance=ExtResource( 2 )]
-detection_groups = PoolStringArray( "Zone" )
+detection_groups = PackedStringArray( "Zone" )

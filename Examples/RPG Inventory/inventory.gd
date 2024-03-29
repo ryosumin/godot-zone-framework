@@ -1,9 +1,9 @@
 extends Node2D
 
 
-onready var slot = load("res://Examples/RPG Inventory/ItemBox.tscn")
-onready var item = load("res://Examples/RPG Inventory/item.tscn")
-onready var game = InventoryLogic.new()
+@onready var slot = load("res://Examples/RPG Inventory/ItemBox.tscn")
+@onready var item = load("res://Examples/RPG Inventory/item.tscn")
+@onready var game = InventoryLogic.new()
 
 
 var starting_items = {
@@ -27,7 +27,7 @@ func _ready():
 	
 	var i = 0
 	for point in $SquareGridGenerator.points:
-		var box = slot.instance()
+		var box = slot.instantiate()
 		box.position = $SquareGridGenerator.position + point
 		game.register_zone(box)
 		add_child(box)
@@ -45,7 +45,7 @@ func _ready():
 
 
 func _generate_item(name):
-	var i = item.instance()
+	var i = item.instantiate()
 	i.set_item(name)
 	game.register_piece(i)
 	add_child(i)

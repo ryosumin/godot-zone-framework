@@ -12,9 +12,9 @@ var finished := false
 # Whether or not a repeated movement can continue from end_position
 var can_continue := true
 # The first point of the path
-var start_position setget ,_start_position_get
+var start_position : get = _start_position_get
 # The final point of the path
-var end_position setget ,_end_position_get
+var end_position : get = _end_position_get
 # The obstacles which the path went over
 var interactions := Array()
 

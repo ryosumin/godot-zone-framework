@@ -1,33 +1,33 @@
-tool
+@tool
 extends Node2D
 
 
-export (int, "Pointy", "Flat") var type setget type_set
-export (int, "Hexagonal", "Rectangular") var shape = false setget shape_set
-export (int, 1, 1000000) var width = 3 setget width_set
-export (int, 1, 1000000) var height = 3 setget height_set
-export (int, 1, 1000000) var cell_size = 16 setget cell_size_set
-export (int) var cell_margin = 2 setget cell_margin_set
-export (Color) var color = Color.white setget color_set
+@export (int, "Pointy", "Flat") var type : set = type_set
+@export (int, "Hexagonal", "Rectangular") var shape = false: set = shape_set
+@export (int, 1, 1000000) var width = 3: set = width_set
+@export (int, 1, 1000000) var height = 3: set = height_set
+@export (int, 1, 1000000) var cell_size = 16: set = cell_size_set
+@export (int) var cell_margin = 2: set = cell_margin_set
+@export (Color) var color = Color.WHITE: set = color_set
 var bounds = HexGridBounds.new(Vector2())
-var points = PoolVector2Array()
-var colors = PoolColorArray([color])
+var points = PackedVector2Array()
+var colors = PackedColorArray([color])
 
 
 func _draw():
-	if Engine.editor_hint:
+	if Engine.is_editor_hint():
 		var label = Label.new()
 		var font = label.get_font("")
 		for point in points:
 			var position = _hex_to_position(point)
 			draw_polygon(_hex(position), colors)
 			draw_circle(position, 4, Color(255, 0, 0))
-			draw_string(font, position, str(point), Color.black)
+			draw_string(font, position, str(point), Color.BLACK)
 		label.free()
 
 
 func _hex(position):
-	var shape = PoolVector2Array()
+	var shape = PackedVector2Array()
 	for i in range(6):
 		var angle_deg
 		if type == HexGridBounds.FLAT:
@@ -60,7 +60,7 @@ func _hex_to_position(hex):
 func _generate_grid():
 	bounds = HexGridBounds.new(Vector2(width, height), type, shape)
 	
-	points = PoolVector2Array()
+	points = PackedVector2Array()
 	if bounds.shape == HexGridBounds.RECTANGULAR:
 		_generate_rectangular()
 	else:
@@ -181,5 +181,5 @@ func shape_set(value):
 
 func color_set(value):
 	color = value
-	colors = PoolColorArray([color])
+	colors = PackedColorArray([color])
 	update()

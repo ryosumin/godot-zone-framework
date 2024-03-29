@@ -42,7 +42,7 @@ func _load_icon():
 		prefix = "other"
 	var file = prefix + "_" + str(icon_number) + ".png"
 	var image = load("res://Examples/RPG Inventory/Images/" + file)
-	$Sprite.texture = image
+	$Sprite2D.texture = image
 
 
 # Called when piece is picked up

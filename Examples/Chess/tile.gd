@@ -12,45 +12,45 @@ var color
 
 
 func _ready():
-	if is_white:
-		$Base.color = WHITE
-	else:
-		$Base.color = BLACK
-	
-	$Highlight.color = HIGHLIGHT
-	$Origin.color = ORIGIN
-	
-	game.connect_to_effect("move_possibilities", self, "_on_move_possibilities_changed")
-	game.connect_to_effect("move_origin", self, "_on_move_origin_changed")
+  if is_white:
+    $Base.color = WHITE
+  else:
+    $Base.color = BLACK
+  
+  $Highlight.color = HIGHLIGHT
+  $Origin.color = ORIGIN
+  
+  game.connect_to_effect("move_possibilities", self, "_on_move_possibilities_changed")
+  game.connect_to_effect("move_origin", self, "_on_move_origin_changed")
 
 
 func can_accept_piece(piece):
-	if pieces.empty():
-		return true
-	var p = pieces[0]
-	if p and p.is_white != piece.is_white:
-		return true
-	return piece.zone == self
+  if pieces.is_empty():
+    return true
+  var p = pieces[0]
+  if p and p.is_white != piece.is_white:
+    return true
+  return piece.zone == self
 
 
 func reset_piece_position(piece):
-	piece.position = position
+  piece.position = position
 
 
 func piece_added(piece):
-	for p in pieces:
-		p.captured()
-	.piece_added(piece)
-	piece.position = position
+  for p in pieces:
+    p.use_captured()
+  super.piece_added(piece)
+  piece.position = position
 
 
 func piece_removed(piece):
-	.piece_removed(piece)
+  super.piece_removed(piece)
 
 
 func _on_move_possibilities_changed():
-	$Highlight.visible = game.has_effect("move_possibilities", location)
+  $Highlight.visible = game.has_effect("move_possibilities", location)
 
 
 func _on_move_origin_changed():
-	$Origin.visible = game.has_effect("move_origin", location)
+  $Origin.visible = game.has_effect("move_origin", location)

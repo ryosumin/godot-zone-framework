@@ -3,7 +3,8 @@ extends Grid
 class_name HexGrid
 
 
-func _init(dimens).(HexGridBounds.new(dimens)):
+func _init(dimens):
+	super(HexGridBounds.new(dimens))
 	pass
 
 

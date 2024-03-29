@@ -4,65 +4,65 @@ extends Node2D
 const BACK_ROW = [ChessLogic.ROOK, ChessLogic.KNIGHT, ChessLogic.BISHOP, ChessLogic.QUEEN, ChessLogic.KING, ChessLogic.BISHOP, ChessLogic.KNIGHT, ChessLogic.ROOK]
 
 
-onready var tile = preload("res://Examples/Chess/tile.tscn")
-onready var piece = preload("res://Examples/Chess/piece.tscn")
-onready var game = ChessLogic.new()
+@onready var tile = preload("res://Examples/Chess/tile.tscn")
+@onready var piece = preload("res://Examples/Chess/piece.tscn")
+@onready var game = ChessLogic.new()
 
 
 # Generates the grid of chess tiles
 func _ready():
-	add_child(game)
-	
-	var index = 0
-	for point in $Grid.points:
-		var t = tile.instance()
-		t.id = index
-		t.position = $Grid.position + point
-		var rank = index % 8
-		var file = index / 8
-		t.location = Vector2(rank, file)
-		t.is_white = (rank + file) % 2 == 0
-		game.add_zone_at(t, t.location)
-		add_child(t)
-		
-		if file <= 1 or file >= 6:
-			var p = _generate_piece_at(rank, file)
-			t.piece_added(p)
-			add_child(p)
-		
-		index += 1
-	game.connect("turn_changed", self, "_turn_changed")
-	game.connect("game_ended", self, "_game_ended")
+  add_child(game)
+  
+  var index = 0
+  for point in $Grid.points:
+    var t = tile.instantiate()
+    t.id = index
+    t.position = $Grid.position + point
+    var rank = index % 8
+    var file = index / 8
+    t.location = Vector2(rank, file)
+    t.is_white = (rank + file) % 2 == 0
+    game.add_zone_at(t, t.location)
+    add_child(t)
+    
+    if file <= 1 or file >= 6:
+      var p = _generate_piece_at(rank, file)
+      t.piece_added(p)
+      add_child(p)
+    
+    index += 1
+  game.connect("turn_changed", Callable(self, "_turn_changed"))
+  game.connect("game_ended", Callable(self, "_game_ended"))
 
 
 func _generate_piece_at(rank, file):
-	var p = piece.instance()
-	game.register_piece(p)
-	
-	if file <= 1:
-		p.is_white = false
-		p.add_to_group("Black")
-	elif file >= 6:
-		p.is_white = true
-		p.add_to_group("White")
-	
-	if file == 1 or file == 6:
-		p.type = ChessLogic.PAWN
-	elif file == 0 or file == 7:
-		p.type = BACK_ROW[rank]
-	
-	return p
+  var p = piece.instantiate()
+  game.register_piece(p)
+  
+  if file <= 1:
+    p.is_white = false
+    p.add_to_group("Black")
+  elif file >= 6:
+    p.is_white = true
+    p.add_to_group("White")
+  
+  if file == 1 or file == 6:
+    p.type = ChessLogic.PAWN
+  elif file == 0 or file == 7:
+    p.type = BACK_ROW[rank]
+  
+  return p
 
 
 func _turn_changed(to):
-	if to == ChessLogic.WHITE:
-		$Label.text = "White's Turn"
-	else:
-		$Label.text = "Black's Turn"
+  if to == ChessLogic.WHITE:
+    $Label.text = "White's Turn"
+  else:
+    $Label.text = "Black's Turn"
 
 func _game_ended(winner):
-	if winner == ChessLogic.WHITE:
-		$Label.text = "White Wins!"
-	else:
-		$Label.text = "Black Wins!"
+  if winner == ChessLogic.WHITE:
+    $Label.text = "White Wins!"
+  else:
+    $Label.text = "Black Wins!"
 

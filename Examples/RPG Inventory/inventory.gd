@@ -1,7 +1,7 @@
 extends Node2D
 
 
-@onready var slot = load("res://Examples/RPG Inventory/ItemBox.tscn")
+@onready var slot = load("res://Examples/RPG Inventory/Item_box.tscn")
 @onready var item = load("res://Examples/RPG Inventory/item.tscn")
 @onready var game = InventoryLogic.new()
 

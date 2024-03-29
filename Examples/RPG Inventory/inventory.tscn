@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://byk10oydm807h"]
 
 [ext_resource type="Texture2D" uid="uid://uo0lbrish5ff" path="res://Examples/RPG Inventory/Images/outline.png" id="1"]
-[ext_resource type="PackedScene" uid="uid://i2a3nsuhljey" path="res://src/grid/square_grid/square_grid_generator.tscn" id="2"]
+[ext_resource type="PackedScene" uid="uid://i2a3nsuhljey" path="res://src/Grid/square_grid/square_grid_generator.tscn" id="2"]
 [ext_resource type="PackedScene" path="res://Examples/RPG Inventory/item_box.tscn" id="3"]
 [ext_resource type="Script" path="res://Examples/RPG Inventory/inventory.gd" id="4"]
 

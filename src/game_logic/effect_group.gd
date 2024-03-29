@@ -1,5 +1,6 @@
 # A container of all ids under an effect
 class_name EffectGroup
+extends RefCounted
 
 
 signal updated

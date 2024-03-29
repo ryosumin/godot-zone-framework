@@ -15,8 +15,12 @@ run/main_scene="res://Examples/Chess/chess.tscn"
 config/features=PackedStringArray("4.2")
 config/icon="res://icon.png"
 
+[filesystem]
+
+import/blender/enabled=false
+
 [rendering]
 
+renderer/rendering_method="mobile"
 environment/defaults/default_environment="res://default_env.tres"
-quality/driver/driver_name="GLES2"
 vram_compression/import_etc=true

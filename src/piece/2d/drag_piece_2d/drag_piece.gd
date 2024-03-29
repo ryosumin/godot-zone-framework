@@ -2,7 +2,6 @@
 class_name DragPiece2D
 extends Piece2D
 
-
 # The zone that is currently underneath the DragPiece2D, can be null.
 var overlap_zone
 

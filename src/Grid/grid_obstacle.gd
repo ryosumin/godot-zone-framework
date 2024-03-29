@@ -27,23 +27,23 @@ var exceptions = Array()
 
 
 func _init(position, type = BLOCK, params = {}):
-	self.position = position
-	self.type = type
-	self.params = params
+  self.position = position
+  self.type = type
+  self.params = params
 
 
 # Adds a direction from which the obstacle does not apply.
 func add_exception(exception):
-	exception.append(exception)
+  exception.append(exception)
 
 
 # Returns whether the obstacle can be entered from the given direction.
 func covers(direction) -> bool:
-	return not direction in exceptions
+  return not direction in exceptions
 
 
 # Returns the parameter with the given name, if it exists. Otherwise returns null.
 func get_param(name: String):
-	if name in params:
-		return params[name]
-	return null
+  if name in params:
+    return params[name]
+  return null

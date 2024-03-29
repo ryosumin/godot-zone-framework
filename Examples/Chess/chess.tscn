@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://dlcjclacxo21u"]
 
 [ext_resource type="Script" path="res://Examples/Chess/chess.gd" id="1"]
-[ext_resource type="PackedScene" uid="uid://dh6yqsrgyfseh" path="res://src/Grid/square_grid/square_grid_generator.tscn" id="2"]
+[ext_resource type="PackedScene" uid="uid://i2a3nsuhljey" path="res://src/Grid/square_grid/square_grid_generator.tscn" id="2"]
 [ext_resource type="FontFile" uid="uid://c0rethlsn4j48" path="res://Examples/Chess/Fonts/lemon_milk/LEMONMILK-Regular.otf" id="3"]
 
 [sub_resource type="FontFile" id="1"]

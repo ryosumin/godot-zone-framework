@@ -1,30 +1,29 @@
-extends Grid
-
 class_name HexGrid
+extends Grid
 
 
 func _init(dimens):
-	super(HexGridBounds.new(dimens))
-	pass
+  super(HexGridBounds.new(dimens))
+  pass
 
 
 func _move_sequence_from_moves(moves):
 #	var sequence = SquareMoveSequence.new()
 #	sequence.sequence = moves
 #	return sequence
-	pass
+  pass
 
 
 func _distance_between_points(from, to):
-	pass
+  pass
 
 
 func convert_index_to_position(index):
-	pass
+  pass
 
 
 func convert_position_to_index(position):
-	pass
+  pass
 
 
 func get_distance_range(position, lower, upper):
@@ -40,11 +39,11 @@ func get_distance_range(position, lower, upper):
 #				if dist >= lower and dist <= upper:
 #					results.append(point)
 #	return results
-	pass
+  pass
 
 
 func get_all():
-	pass #return get_in_dimens(Vector2(0, 0), Vector2(bounds.x, bounds.y))
+  pass #return get_in_dimens(Vector2(0, 0), Vector2(bounds.x, bounds.y))
 
 
 func get_in_dimens(position, dimens):
@@ -55,7 +54,7 @@ func get_in_dimens(position, dimens):
 #			if is_position_valid(point):
 #				results.append(point)
 #	return results
-	pass
+  pass
 
 
 func get_pattern_results(position, pattern):
@@ -92,4 +91,4 @@ func get_pattern_results(position, pattern):
 #				batch.append(mirror)
 #
 #	return ._batch_move_results(position, batch, pattern.repeat)
-	pass
+  pass

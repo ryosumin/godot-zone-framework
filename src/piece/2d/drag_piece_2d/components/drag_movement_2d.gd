@@ -2,7 +2,6 @@
 
 # Allows the user to move the parent object by dragging with the mouse.
 class_name DragMovement2D
-
 extends CharacterBody2D
 
 

@@ -1,8 +1,6 @@
-# Finds an object at a point.
 class_name OverlapDetector2D
-
 extends Node2D
-
+# Finds an object at a point.
 
 # Called when current overlapping object is different from previous.
 signal overlap_changed(from, to)

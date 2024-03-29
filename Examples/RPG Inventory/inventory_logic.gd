@@ -1,3 +1,2 @@
-extends GameLogic
-
 class_name InventoryLogic
+extends GameLogic

@@ -1,7 +1,5 @@
-extends GridBounds
-
 class_name SquareGridBounds
-
+extends GridBounds
 
 var x : get = _x_get
 var y : get = _y_get

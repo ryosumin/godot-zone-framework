@@ -1,6 +1,5 @@
-extends GridGameLogic
-
 class_name ChessLogic
+extends GridGameLogic
 
 
 enum {QUEEN, KING, PAWN, KNIGHT, ROOK, BISHOP}

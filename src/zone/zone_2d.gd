@@ -14,20 +14,20 @@ var pieces = Array()
 
 # Returns whether the zone can accept the given piece.
 func can_accept_piece(piece) -> bool:
-	return true
+  return true
 
 
 # Moves the given piece to a default position
 func reset_piece_position(piece) -> void:
-	pass
+  pass
 
 
 # Accepts the given piece
 func piece_added(piece):
-	piece.zone = self
-	pieces.append(piece)
+  piece.zone = self
+  pieces.append(piece)
 
 
 # Removes the given piece
 func piece_removed(piece):
-	pieces.erase(piece)
+  pieces.erase(piece)

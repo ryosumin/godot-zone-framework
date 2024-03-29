@@ -20,20 +20,20 @@ var interactions := Array()
 
 
 func _init(instructions: Array):
-	self.instructions = instructions
+  self.instructions = instructions
 
 
 func _start_position_get():
-	return path.front()
+  return path.front()
 
 
 func _end_position_get():
-	return path.back()
+  return path.back()
 
 
 func add_point(point):
-	path.append(point)
+  path.append(point)
 
 
 func add_interaction(obstacle: GridObstacle):
-	interactions.append(obstacle)
+  interactions.append(obstacle)

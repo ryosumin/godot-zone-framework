@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://bhng67wgvn8dv"]
 
-[ext_resource type="Script" path="res://src/piece/2d/drag_piece_2d/components/drag_movement_2d.gd" id="1"]
+[ext_resource type="Script" path="res://addons/zone-framework/piece/2d/drag_piece_2d/components/drag_movement_2d.gd" id="1"]
 
 [sub_resource type="RectangleShape2D" id="1"]
 

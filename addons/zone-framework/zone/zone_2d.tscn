@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://c4xd8fmxt7yce"]
 
-[ext_resource type="Script" path="res://src/zone/zone_2d.gd" id="1"]
+[ext_resource type="Script" path="res://addons/zone-framework/zone/zone_2d.gd" id="1"]
 
 [node name="Zone2D" type="Area2D" groups=["Zone"]]
 script = ExtResource("1")

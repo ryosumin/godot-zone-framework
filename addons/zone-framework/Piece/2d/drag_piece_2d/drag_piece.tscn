@@ -1,9 +1,9 @@
 [gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://src/piece/2d/drag_piece_2d/drag_piece.gd" type="Script" id=1]
-[ext_resource path="res://src/piece/2d/drag_piece_2d/components/overlap_detector_2d.tscn" type="PackedScene" id=2]
-[ext_resource path="res://src/piece/2d/drag_piece_2d/components/drag_movement_2d.tscn" type="PackedScene" id=3]
-[ext_resource path="res://src/piece/2d/piece_2d.tscn" type="PackedScene" id=4]
+[ext_resource path="res://addons/zone-framework/piece/2d/drag_piece_2d/drag_piece.gd" type="Script" id=1]
+[ext_resource path="res://addons/zone-framework/piece/2d/drag_piece_2d/components/overlap_detector_2d.tscn" type="PackedScene" id=2]
+[ext_resource path="res://addons/zone-framework/piece/2d/drag_piece_2d/components/drag_movement_2d.tscn" type="PackedScene" id=3]
+[ext_resource path="res://addons/zone-framework/piece/2d/piece_2d.tscn" type="PackedScene" id=4]
 
 [node name="DragPiece" instance=ExtResource( 4 )]
 script = ExtResource( 1 )

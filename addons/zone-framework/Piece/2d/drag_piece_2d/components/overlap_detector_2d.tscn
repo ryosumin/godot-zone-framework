@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://c5cnp7ycbs11b"]
 
-[ext_resource type="Script" path="res://src/piece/2d/drag_piece_2d/components/overlap_detector_2d.gd" id="1"]
+[ext_resource type="Script" path="res://addons/zone-framework/piece/2d/drag_piece_2d/components/overlap_detector_2d.gd" id="1"]
 
 [node name="OverlapDetector2D" type="Node2D"]
 visible = false

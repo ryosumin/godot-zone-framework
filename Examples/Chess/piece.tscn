@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://c4ux3d08cg0bc"]
 
-[ext_resource type="PackedScene" path="res://src/piece/2d/drag_piece_2d/drag_piece.tscn" id="1"]
+[ext_resource type="PackedScene" path="res://addons/zone-framework/piece/2d/drag_piece_2d/drag_piece.tscn" id="1"]
 [ext_resource type="Script" path="res://Examples/Chess/piece.gd" id="2"]
 [ext_resource type="Texture2D" uid="uid://ci84ibi0416if" path="res://Examples/Chess/Images/white_queen.png" id="3"]
 
